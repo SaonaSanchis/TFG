@@ -1,0 +1,102 @@
+---
+title: "Clustering visualization "
+author: "Saona Sanchis"
+date: "7/4/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## At 3 dimensions
+
+# For knn value of 20:
+
+```{r }
+library(ggplot2)
+
+
+setwd("/Users/User/Documents/BI3/TFG/Code/Code/Figures/KNN_preclamsia1_20")
+
+KNN_pre_20 <- read.csv("3_dims_clustering.csv")
+
+sub20 <- KNN_pre_20[1:20,1:3]
+
+ggplot(sub20,aes(Cluster.1..n.93.,Cluster.2..n.15.,color=Row)) + geom_point()
+
+sub35 <- KNN_pre_20[20:35,1:3]
+
+ggplot(sub35,aes(Cluster.1..n.93.,Cluster.2..n.15.,color=Row)) + geom_point()
+
+sub49 <- KNN_pre_20[35:49,1:3]
+
+ggplot(sub49,aes(Cluster.1..n.93.,Cluster.2..n.15.,color=Row)) + geom_point()
+
+
+```
+
+# For knn value of 60:
+
+```{r }
+setwd("/Users/User/Documents/BI3/TFG/Code/Code/Figures/KNN_preclamsia1_60")
+
+KNN_pre_60 <- read.csv("3_dims_clustering.csv")
+
+sub20 <- KNN_pre_60[1:20,1:3]
+
+ggplot(sub20,aes(Cluster.1..n.26.,Cluster.2..n.23.,color=Row)) + geom_point()
+
+sub35 <- KNN_pre_60[20:35,1:3]
+
+ggplot(sub35,aes(Cluster.1..n.26.,Cluster.2..n.23.,color=Row)) + geom_point()
+
+sub49 <- KNN_pre_60[35:49,1:3]
+
+ggplot(sub49,aes(Cluster.1..n.26.,Cluster.2..n.23.,color=Row)) + geom_point()
+```
+
+## At dimension 5
+
+For knn value of 20:
+
+```{r }
+setwd("/Users/User/Documents/BI3/TFG/Code/Code/Figures/KNN_preclamsia1_20")
+
+KNN_pre_20 <- read.csv("5_dims_clustering.csv")
+
+sub20 <- KNN_pre_20[1:20,1:3]
+
+ggplot(sub20,aes(Cluster.2..n.15.,Cluster.1..n.115.,color=Row)) + geom_point()
+
+sub35 <- KNN_pre_20[20:35,1:3]
+
+ggplot(sub35,aes(Cluster.2..n.15.,Cluster.1..n.115.,color=Row)) + geom_point()
+
+sub49 <- KNN_pre_20[35:49,1:3]
+
+ggplot(sub49,aes(Cluster.2..n.15.,Cluster.1..n.115.,color=Row)) + geom_point()
+```
+
+# For knn value of 60:
+
+```{r }
+setwd("/Users/User/Documents/BI3/TFG/Code/Code/Figures/KNN_preclamsia1_60")
+
+KNN_pre_60 <- read.csv("5_dims_clustering.csv")
+
+sub20 <- KNN_pre_60[1:20,1:7]
+
+ggplot(sub20,aes(Cluster.1..n.59.,Cluster.2..n.10.,color=Row)) + geom_point()
+
+sub35 <- KNN_pre_60[20:35,1:3]
+
+ggplot(sub35,aes(Cluster.1..n.59.,Cluster.2..n.10.,color=Row)) + geom_point()
+
+sub49 <- KNN_pre_60[35:49,1:3]
+
+ggplot(sub49,aes(Cluster.1..n.59.,Cluster.2..n.10.,color=Row)) + geom_point()
+
+```
+
+
